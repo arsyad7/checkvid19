@@ -27,7 +27,7 @@ section {
 .jumbotron {
     background-image: url(img/jumbotron.jpg);
     background-size: cover;
-    height: 95vh;
+    height: 90vh;
     text-align: center;
     position: relative;
 }
@@ -52,7 +52,7 @@ nav {
 .fitur {
     background-image:linear-gradient(#000046, #231141);
     margin-bottom: 50px;
-    padding-top: 30px;
+    /* padding-top: 10px; */
     padding-bottom: 80px;
     height: 100vh;
 }
@@ -150,6 +150,10 @@ h5.tag {
      color : white
  }
 
+ img {
+     width: 20%;
+     text-align: center;
+ }
 
 
 
