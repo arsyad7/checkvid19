@@ -16,6 +16,11 @@
         rel="stylesheet">
     <script src="script.js"></script>
 
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
     <title>Oslo Fox</title>
 </head>
 
@@ -29,14 +34,8 @@
             </button>
             <div class="collapse navbar-collapse box-menus" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Menu Utama <span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#last">About Covid</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Features">Periksa</a>
+                        <a class="nav-link" href="https://id.wikipedia.org/wiki/Pandemi_COVID-19#:~:text=Penyakit%20ini%20disebabkan%20oleh%20koronavirus,pada%20tanggal%2011%20Maret%202020.">About Covid</a>
                     </li>
           
                 </ul>
@@ -183,28 +182,29 @@
 
         <section class="box-content">
             <div id="part3">
-                <div class="gejala-container">
-                    <div class="judul">
-                      <h1>Daftar User</h1>
-                    </div>
-                    <div class="statistic">
-                      <div class="statistic-container">
-                        <div class="statistic-box">
-                          <p><b>NAMA LENGKAP</b></p>
-                          <p class="number" id="highCount">asep subagio</p>
-                        </div>
-                        <div class="statistic-box">
-                          <p><b>UMUR</b></p>
-                          <p class="number" id="lowCount">-22</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="gejala-box">
-                      <h2>GEJALA</h2>
-                
-                      <ul class="gejala-list"></ul>
-                    </div>
-                </div>
+                <h1 class="text-center mt-5">Table Gejala</h1>
+                <table class="table mt-5">
+                    <thead>
+                        <tr class="text-center">
+                            <th>Name</th>
+                            <th>Usia</th>
+                            <th>Gejala</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center">
+                            <td>Andrew Mike</td>
+                            <td>2013</td>
+                            <td>€ 99,225</td>
+                            <td class="td-actions text-center">
+                                <a href="#" class="edit">Edit</a>
+                                <a href="#" class="edit">Delete</a>
+                                <a href="#">Periksa</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 

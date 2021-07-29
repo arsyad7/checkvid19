@@ -374,4 +374,79 @@ section 3
     font-weight: 500;
     font-size: 1.125rem;
   }
+
+  .btn-crud {
+    margin-right: 30px;
+  }
+
+  .btn-edit {
+    background-color: green;
+    margin-right: 5%;
+    width: 100px;
+  }
   
+  .btn-delete {
+    background-color: red;
+    margin-right: 5%;
+  }
+
+  .btn-periksa {
+    background-color: blue;
+    margin-right: 5%;
+  }
+
+  .btn.btn-info {
+    color: #fff !important;
+    background-color: #00bcd4 !important;
+    border-color: #00bcd4;
+    box-shadow: 0 2px 2px 0 rgba(0,188,212,.14),
+                0 3px 1px -2px rgba(0,188,212,.2),
+                0 1px 5px 0 rgba(0,188,212,.12) !important;
+}
+
+  .btn.btn-just-icon .material-icons {
+    margin-top: 0;
+    position: absolute;
+    width: 100%;
+    transform: none;
+    left: 0;
+    top: 0;
+    height: 100%;
+    line-height: 41px;
+    font-size: 20px;
+}
+
+.btn.btn-just-icon.btn-sm .material-icons {
+     font-size: 17px; 
+     line-height: 29px; 
+}
+
+.btn .material-icons {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    margin-top: -1.2em;
+    margin-bottom: -1em;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.edit {
+    margin-right: 10px;
+}
