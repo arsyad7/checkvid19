@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="script.js"></script>
+
+
+
+    <title>Oslo Fox</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fontwhite">
+        <div class="container">
+            <a class="navbar-brand" href="">Checkvid19</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse box-menus" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://id.wikipedia.org/wiki/Pandemi_COVID-19#:~:text=Penyakit%20ini%20disebabkan%20oleh%20koronavirus,pada%20tanggal%2011%20Maret%202020.">About Covid</a>
+                    </li>
+          
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div data-spy="scroll" data-target="#navbarNav" data-offset="0"></div>
+
+    <!--awal jumbotron-->
+    
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <img src="assets/Temperature Measurement-amico (1).png" align="left" width="400" height="400">
+                <h1 class="display-4 title alignright">CHECKVID19</h1>
+                <h5 class="tag alignright">CHECKVID19 adalah website pengecekan covid melalui gejala apa yang dialami,
+                    hasil pengecekan kita tidak benar 100%. Namun, kita hanya memberikan hasil berdasarkan
+                    analisa yang kami terapkan demi memudahkan kalian untuk sesegera mungkin mengetahui kondisi
+                    kalian saat ini dan apa yang harus kalian lakukan. Jangan lupa taat prokes yaaa!!</h5>
+                <ul>
+                    <button class="button-satu"><span><a href="#section2">Periksa</a></span></button>
+                    <button class="button-satu"><span><a href="https://covid19.go.id/"">News</a></span></button>
+                </ul>
+            </div>
+        </div>
+
+        <!--akhir jumbotron-->
+       
+        <section class="box-content" id="section2">
+            <div id="part2" class="fitur">
+                <div class="container">
+                    <!--isi panel worksession-->
+                    <div class = "center">
+                        <div class="col-md-8">
+                            <img class="imgsec2" src="img/img1.png">
+                        </div>
+                    <div class="box center">
+                      
+                    <form>
+                        <div class="row">
+                          <div class="col">
+                            <form>
+                                <div class="form-group row">
+                                  <label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
+                                  <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputNama" placeholder="isi dengan Nama Lengkap">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="inoutUsia" class="col-sm-2 col-form-label">Usia</label>
+                                  <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="isi" placeholder="isi dengan Usia Anda">
+                                  </div>
+                                </div>
+                                <fieldset class="form-group">
+                                  <div class="row">
+                                    <legend class="col-form-label col-sm-2 pt-0">Jenkel</legend>
+                                    <div class="col-sm-10">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="radioButtonLaki" value="radioLaki" checked>
+                                        <label class="form-check-label" for="radioLaki">
+                                            Laki-Laki
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="radioButtonPerempuan" value="radioPerempuan">
+                                        <label class="form-check-label" for="radioPerempuan">
+                                            Perempuan
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                           
+                                <div class="form-group row">
+                                  <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-primary top10">Tambahkan Data</button>
+                                  </div>
+                                </div>
+                              </form>
+                          </div>
+                          <div class="col">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbDemam">
+                                <label class="custom-control-label white" for="cbDemam">Demam</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbBatukKering">
+                                <label class="custom-control-label white" for="cbBatukKering">Batuk Kering</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbKelelahan">
+                                <label class="custom-control-label white" for="cbKelelahan">Kelelahan</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbKhawatir">
+                                <label class="custom-control-label white" for="cbKhawatir">Perasaan Khawatir/Tidak Aman</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbNyeriTenggorokan">
+                                <label class="custom-control-label white" for="cbNyeriTenggorokan">Nyeri Tenggorokan</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbDiare">
+                                <label class="custom-control-label white" for="cbDiare">Diare</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbKonjungtivitis">
+                                <label class="custom-control-label white" for="cbKonjungtivitis">Konjungtivitis</label>
+                            </div>
+                         </div>
+
+                         <div class="col">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbSakitKepala">
+                                <label class="custom-control-label white" for="cbSakitKepala">Sakit Kepala</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbHilangIndraPerasa">
+                                <label class="custom-control-label white" for="cbHilangIndraPerasa">Hilang Indera Perasa/Penciuman</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbPerubahanWarnaJari">
+                                <label class="custom-control-label white" for="cbPerubahanWarnaJari">Perubahan Warna pada Jari</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbKesulitanBernafas">
+                                <label class="custom-control-label white" for="cbKesulitanBernafas">Kesulitan Bernafas</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbNyeriDada">
+                                <label class="custom-control-label white" for="cbNyeriDada">Nyeri Dada</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cbHilangnyaKemampuanBerbicara">
+                                <label class="custom-control-label white" for="cbHilangnyaKemampuanBerbicara">Hilangnya Kemampuan Berbicara</label>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    
+                    </div>
+                </div>
+                 
+                    <!--isi panel worksession-->
+                </div>
+            </div>
+        </section>
+
+        <section class="box-content">
+            <div id="part3" style="margin-top: 250px;">
+                <h1 class="text-center mt-5">Table Gejala</h1>
+                <table class="table mt-5">
+                    <thead>
+                        <tr class="text-center">
+                            <th>Name</th>
+                            <th>Usia</th>
+                            <th>Gejala</th>
+                            <!-- <th>Actions</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center">
+                            <td>Andrew Mike</td>
+                            <td>22 th</td>
+                            <td>Sakit Kepala, Batuk, Pilek</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+               <div class="text-center">
+                <td class="td-actions text-center">
+                    <a href="#" class="edit" style="margin-right: 20px; font-size: 22px;"><b>Delete</b></a>
+                    <a href="#part4" style="font-size: 22px;"><b>Cek Hasil</b></a>
+                </td>
+               </div>
+            </div>
+            
+        </section>
+
+        <section class="box-content">
+            <div id="part4" class="fitur">
+                <div class="container">
+                    <!--isi panel worksession-->
+                    <div class="row justify-content-md-center fontwhite">
+                            <blockquote class="quote-box">
+                              <p class="quotation-mark">
+                                “
+                              </p>
+                              <p class="quote-text">
+                                Nama : Andrew Mike
+                              </p>
+                              <p class="quote-text">
+                                Status : ODP
+                              </p>
+                              <p class="quote-text">
+                                "Silahkan melakukan ISOMAN selama minimal 2 Minggu"
+                              </p>
+                              <hr>
+                              <div class="blog-post-actions">
+                                <p class="blog-post-bottom pull-left">
+                                  Team 4 - Oslo - Fox
+                                </p>
+                               
+                              </div>
+                            </blockquote>
+          
+                       
+                    </div>
+                    <div class="row justify-content-md-center fontwhite">
+                        
+
+                    </div>
+                </div>
+                <!--isi panel worksession-->
+            </div>
+        </section>
+    </div>
+
+
+    <!--
+
+    </script>-->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
