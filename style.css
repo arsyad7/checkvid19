@@ -30,6 +30,7 @@ section {
     height: 90vh;
     text-align: center;
     position: relative;
+    margin-bottom: 0!important;
 }
 
 .jumbotron .container {
@@ -74,7 +75,7 @@ nav {
 }
 
 .title {
-    margin-top: 25vh;
+    margin-top: 10vh;
     margin-left: 50vh;
 }
 
@@ -150,7 +151,7 @@ h5.tag {
      color : white
  }
 
- img {
+ .imgsec2 {
      width: 20%;
      text-align: center;
  }
@@ -379,3 +380,43 @@ section 3
     font-size: 1.125rem;
   }
   
+
+  /*  */
+  blockquote{
+    border-left:none
+}
+
+.quote-badge{
+    background-color: rgba(0, 0, 0, 0.2);   
+}
+
+.quote-box{
+    
+    overflow: hidden;
+    margin: 0;
+    padding-top: -100px;
+    padding-left: 30px;
+    border-radius: 17px;
+    background-color: teal;
+    margin-top: 130px;
+    color:white;
+    width: 625px;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;
+    
+}
+
+.quotation-mark{
+    
+    margin-top: 20px;
+    font-weight: bold;
+    font-size:100px;
+    color:white;
+    font-family: "Times New Roman", Georgia, Serif;
+    
+}
+
+.quote-text{
+    
+    font-size: 19px;
+    margin-top: 10px;
+}
