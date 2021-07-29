@@ -1,4 +1,4 @@
-const { JSON_SCHEMA } = require("js-yaml")
+// const { JSON_SCHEMA } = require("js-yaml")
 
 const db_gejala = [
     "lemas-1",
