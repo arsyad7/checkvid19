@@ -50,19 +50,21 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <img src="assets/Temperature Measurement-amico (1).png" align="left" width="400" height="400">
-                <h1 class="display-4 title alignright">Checkvid19</h1>
-                <h5 class="tag alignright">Setelah dilakukan sejumlah pengetatan mulai dari PPKM Darurat hingga PPKM Level 4, penanganan Covid-19 di DKI Jakarta mulai menunjukkan hasil. 
-                    Kasus Covid-19 di Ibukota jauh lebih terkendali dibandingkan pekan lalu maupun 2 pekan lalu.</h5>
+                <h1 class="display-4 title alignright">CHECKVID19</h1>
+                <h5 class="tag alignright">CHECKVID19 adalah website pengecekan covid melalui gejala apa yang dialami,
+                    hasil pengecekan kita tidak benar 100%. Namun, kita hanya memberikan hasil berdasarkan
+                    analisa yang kami terapkan demi memudahkan kalian untuk sesegera mungkin mengetahui kondisi
+                    kalian saat ini dan apa yang harus kalian lakukan. Jangan lupa taat prokes yaaa!!</h5>
                 <ul>
+                    <button class="button-satu"><span><a href="#section2">Periksa</a></span></button>
                     <button class="button-satu"><span><a href="https://covid19.go.id/"">News</a></span></button>
-                    <button class="button-satu"><span>Periksa</span></button>
                 </ul>
             </div>
         </div>
 
         <!--akhir jumbotron-->
        
-        <section class="box-content">
+        <section class="box-content" id="section2">
             <div id="part2" class="fitur">
                 <div class="container">
                     <!--isi panel worksession-->
@@ -181,41 +183,27 @@
 
         <section class="box-content">
             <div id="part3">
-                <div class="container">
-                    <!--isi panel worksession-->
-                    <div class="section">
-                        <table class="table table-striped">
-                            <thead>
-                              <tr>
-                                <th scope="col">Nama</th>
-                                <th scope="col">Usia</th>
-                                <th scope="col">Gejala</th>
-                                <th scope="col">Handle</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
-                            </tbody>
-                        </table>
+                <div class="gejala-container">
+                    <div class="judul">
+                      <h1>Daftar User</h1>
                     </div>
-                    <!--isi panel worksession-->
+                    <div class="statistic">
+                      <div class="statistic-container">
+                        <div class="statistic-box">
+                          <p><b>NAMA LENGKAP</b></p>
+                          <p class="number" id="highCount">asep subagio</p>
+                        </div>
+                        <div class="statistic-box">
+                          <p><b>UMUR</b></p>
+                          <p class="number" id="lowCount">-22</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="gejala-box">
+                      <h2>GEJALA</h2>
+                
+                      <ul class="gejala-list"></ul>
+                    </div>
                 </div>
             </div>
         </section>
