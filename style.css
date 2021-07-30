@@ -1,0 +1,277 @@
+/* navbar */
+.navbar {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.navbar-brand {
+    font-family:  'Noto Sans SC', sans-serif;
+    font-size: 30px;
+    font-weight: bold 700;
+    color: white;
+} 
+
+body, html {
+    line-height: 36px;
+    height: 100%;
+}
+
+section {
+    height: 70%;
+}
+
+/*jumbotron*/
+.jumbotron {
+    background-image: url(img/jumbotron.jpg);
+    background-size: cover;
+    height: 90vh;
+    text-align: center;
+    position: relative;
+    margin-bottom: 0!important;
+}
+
+.jumbotron .container {
+    z-index: 1;
+    position: relative;
+}
+
+.section {
+    color: black;
+    text-align: center;
+
+    margin-top: 75px;
+    font-size: 30px;
+}
+
+nav {
+    background-image:linear-gradient(#000046, #200e3d);
+}
+
+.fitur {
+    background-image:linear-gradient(#000046, #231141);
+    margin-bottom: 50px;
+    /* padding-top: 10px; */
+    padding-bottom: 80px;
+    height: 100vh;
+}
+
+.top30 {
+    margin-top: 30px;
+}
+
+.top60 {
+    margin-top: 60px;
+}
+
+.top10 {
+    margin-top: 10px;
+}
+
+.bottom60 {
+    margin-bottom: 60px;
+}
+
+.title {
+    margin-top: 10vh;
+    margin-left: 50vh;
+}
+
+.alignright {
+    text-align: right;
+}
+
+.alignleft {
+    text-align: left;
+}
+
+h5.tag {
+    margin-left: 100px;
+}
+
+.fontwhite {
+    color: white;
+}
+
+.box {
+    background-color: teal;
+    margin-bottom: 120px;
+    margin: auto;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+/**/
+
+  .box .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(255, 196, 0, 0.63);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .box .btn:hover {
+    background-color: rgb(255, 196, 0);
+  }
+
+ 
+ .btn {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(255, 196, 0, 0.63);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+ .white {
+     color : white
+ }
+
+ .imgsec2 {
+     width: 20%;
+     text-align: center;
+ }
+
+
+
+   /*-- device mobile --*/
+@media screen and (max-width: 640px) {
+    .jumbotron {
+        margin-top: 0px !important;
+        z-index: 0 !important;
+        width: 100%;
+    }
+
+    .jumbotron h1 {
+        text-align: center;
+        margin-left: 100px;
+        margin-top: 50vh;
+        font-family:  'Noto Sans SC', sans-serif;
+    }
+
+    .container {
+        text-align: center;
+    }
+     
+    .gambar_login {
+        margin-right: 50px;
+    }
+
+    .kotak_login {
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    }
+
+
+/*
+Button layout satu
+*/
+.button-satu {
+    border-radius: 4px;
+    background-color: #3846c7;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 15px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 30px;
+    margin-right: 0;
+    float: right;
+}
+
+.button-satu span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button-satu span a {
+    text-decoration: none;
+    color: white;
+}
+
+.button-satu span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button-satu:hover span {
+    padding-right: 25px;
+}
+
+.button-satu:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+
+.blockquote{
+    border-left:none
+}
+
+.quote-badge{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.quote-box{
+    overflow: hidden;
+    margin: 0;
+    padding-top: -100px;
+    padding-left: 30px;
+    border-radius: 17px;
+    background-color: teal;
+    margin-top: 130px;
+    color:white;
+    width: 625px;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;
+    
+}
+
+.quotation-mark{
+    
+    margin-top: 20px;
+    font-weight: bold;
+    font-size:100px;
+    color:white;
+    font-family: "Times New Roman", Georgia, Serif;
+    
+}
+
+.quote-text{
+    
+    font-size: 19px;
+    margin-top: 10px;
+}
