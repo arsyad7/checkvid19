@@ -16,18 +16,16 @@ const db_gejala = [
 
 let users = []
 
-
 function daftar(bioPasien){ //CREATE
     let frontNumber = ''
     
-    for (let i = 0; i < bioPasien.length; i++) {
         let obj = {
             ID : 0,
-            name: bioPasien[i].nama,
-            umur: bioPasien[i].usia,
-            jenisKelamin: bioPasien[i].jenisKelamin,
-            keluhan: bioPasien[i].gejala,
-            swab: bioPasien[i].hasilSwab,
+            nama: bioPasien.nama,
+            umur: bioPasien.umur,
+            jenisKelamin: bioPasien.jenisKelamin,
+            gejala: bioPasien.gejala,
+            swab: bioPasien.hasilSwab,
             status: '',
             saran: ''
         }
@@ -47,31 +45,31 @@ function daftar(bioPasien){ //CREATE
         else if ((String(users.length).length) === 5){
             frontNumber = ''
         }
+
         obj.ID = frontNumber+(users.length + 1)
-        if (!bioPasien[i].hasilSwab){
+        if (!bioPasien.hasilSwab){
             obj.swab = 'Belum pernah swab test'
         }
-        if (bioPasien[i].gejala.length === 0){
+        if (bioPasien.gejala.length === 0){
             obj.keluhan = 'Tidak ada keluhan'
         }
         users.push(obj)
-    }
 
     return users
 }
 
 function cekPerawatan(bioPasien, database){ //UPDATE
-    let pasien = daftar(bioPasien)
+    let pasien = bioPasien //{}
 
-    for (let i = 0; i < pasien.length; i++){
+    // for (let i = 0; i < pasien.length; i++){
         let count = 0;
         let counterPDP = 0
         for (let j = 0; j < database.length; j++){
-            for (let k = 0; k < pasien[i].keluhan.length; k++){
-                if (pasien[i].keluhan[k] === database[j]){
+            for (let k = 0; k < pasien.gejala.length; k++){
+                if (pasien.gejala[k] === database[j]){
                     count++
                 }
-                if (pasien[i].keluhan[k] === "Nyeri Dada" || pasien[i].keluhan[k] === "Hilangnya Kemampuan Berbicara") {
+                if (pasien.gejala[k] === "Nyeri Dada" || pasien.gejala[k] === "Hilangnya Kemampuan Berbicara") {
                     counterPDP++
                 }
                 
@@ -104,7 +102,7 @@ function cekPerawatan(bioPasien, database){ //UPDATE
         }
         
         
-    }
+    // }
     return pasien
 }
 
@@ -112,59 +110,16 @@ function cekPerawatan(bioPasien, database){ //UPDATE
 
 // }
 
-let bioPasien = [
+let bioPasien = 
     {
         nama: 'Joe',
-        usia: 24,
+        umur: 24,
         jenisKelamin: 'Pria',
         gejala: ['Demam'],
         hasilSwab: 'positif'
-    },
-    {
-        nama: 'Kopi',
-        usia: 25,
-        jenisKelamin: 'Pria',
-        gejala: ['Batuk Kering', 'Perasaan Khawatir/Tidak Aman', 'Sakit Kepala'],
-        hasilSwab: ''
-    },
-    {
-        nama: 'Asia',
-        usia: 26,
-        jenisKelamin: 'Wanita',
-        gejala: ['Kesulitan Bernafas', 'Konjungtivitis'],
-        hasilSwab: ''
-    },
-    {
-        nama: 'Benua',
-        usia: 27,
-        jenisKelamin: 'Pria',
-        gejala: ['Nyeri Dada'],
-        hasilSwab: ''
-    },
-    {
-        nama: 'Charlie',
-        usia: 28,
-        jenisKelamin: 'Pria',
-        gejala: ['Hilangnya Kemampuan Berbicara'],
-        hasilSwab: 'negatif'
-    },
-    {
-        nama: 'Dono',
-        usia: 29,
-        jenisKelamin: 'Pria',
-        gejala: ['Diare'],
-        hasilSwab: 'negatif'
-    },
-    {
-        nama: 'Angel',
-        usia: 30,
-        jenisKelamin: 'Wanita',
-        gejala: ['Nyeri Tenggorokan' , 'Perasaan Khawatir/Tidak Aman'],
-        hasilSwab: ''
     }
-]
 
-console.log(cekPerawatan(bioPasien, db_gejala))
+// console.log(cekPerawatan(bioPasien, db_gejala))
 // console.log(cekPerawatan('Kopi', 24, ['demam', 'mual', 'batuk darah'], db_gejala))
 // console.log(cekPerawatan('Asia', 24, ['demam'], db_gejala))
 // console.log(cekPerawatan('Benua', 24, [], db_gejala))
@@ -172,3 +127,129 @@ console.log(cekPerawatan(bioPasien, db_gejala))
 // console.log(cekPerawatan('Dono', 24, ['mual'], db_gejala, 'negatif'))
 // console.log(cekPerawatan('Charlie', 24, ["sulit bernafas" , "sakit di bagian dada"], db_gejala))
 
+//CHECKVID19
+
+let formUser = document.getElementById("formUser")
+
+//function eventListener "Tambahkan Data"
+
+formUser.addEventListener('submit', function(event){
+    event.preventDefault() //biar ga ke refresh
+    // alert("jdwijwnj")
+
+    let namaResponden = document.getElementById("inputNama").value
+    let umurResponden = document.getElementById("inputUsia").value
+    let genderResponden = document.getElementById("radioButtonLaki").checked ? ("Laki-laki") : ("Perempuan")
+    // alert(genderResponden)
+
+    let arrayGejala = []
+    let checkboxGejala = document.querySelectorAll('input[name=gejala]:checked')
+
+    for (let i = 0; i < checkboxGejala.length; i++) {
+    arrayGejala.push(checkboxGejala[i].value)
+    }
+    // alert(arrayGejala)
+
+    // let gejalaResponden = document.getElementById("custom-control-label white")
+    // let hasilGejala = document.querySelector('.custom-control-input').checked
+
+    // let namaPeriksa = document.getElementById("namaPeriksa")
+    // let umurPeriksa = document.getElementById("umurPeriksa")
+
+    // namaPeriksa.innerHTML = namaResponden
+    // umurPeriksa.innerHTML = umurResponden.value
+    // gejalaPeriksa.innerHTML = arrayGejala
+
+    daftar({
+        nama: namaResponden,
+        umur: umurResponden,
+        jenisKelamin: genderResponden,
+        gejala: arrayGejala
+    })
+
+    rendertable()
+})
+
+
+
+function rendertable() {
+    // let namaHasil = document.getElementById("namaHasil")
+    // namaHasil.innerHTML = `Nama: ${namaResponden.value}`
+    
+    let containerGejala = document.getElementById("tabel-gejala-container")
+    containerGejala.innerHTML = ""
+    for (let i = 0; i < users.length; i++){
+        containerGejala.innerHTML += `<tr class="text-center">
+        <td id="namaPeriksa"> ${users[i].nama} </td>
+        <td id="umurPeriksa"> ${users[i].umur} </td>
+        <td id="gejalaPeriksa"> ${users[i].gejala} </td>
+        <td> 
+            <a href="#" class="edit" style="margin-right: 20px; font-size: 22px;"><b>Delete</b></a>
+            <a href="#part4" style="font-size: 22px;" onclick="myFunction()"><b>Cek Hasil</b></a>
+        </td>
+        </tr> `
+    }
+}
+
+
+//function eventListener cekHasil
+for
+<button onclick="myFunction()">Click me</button>
+
+// let namaPeriksa = document.getElementById("namaPeriksa")
+
+// namaPeriksa.addEventListener('submit', function(event){
+//     event.preventDefault()
+
+    
+// }
+
+/* <tr class="text-center">
+<td id="namaPeriksa">Andrew Mike</td>
+<td id="umurPeriksa">22 th</td>
+<td id="gejalaPeriksa">Sakit Kepala, Batuk, Pilek</td>
+</tr> */
+//function eventListener delete
+
+
+// Calorie Tracker
+// const menuList = document.querySelector('.food-list');
+// const highCal = document.querySelector("#highCount");
+// const midCal = document.querySelector("#mediumCount");
+// const lowCal = document.querySelector("#lowCount");
+// let statsFoods = statisticFood(foods);
+
+// highCal.textContent = statsFoods.high;
+// midCal.textContent = statsFoods.medium;
+// lowCal.textContent = statsFoods.low;
+
+// ABAIKAN code dibawah ini
+// function render() {
+//   // get todo list
+//   let foodObject = generateFoodCalorie(foods)
+//   // put all task to html
+//   for (let i = 0; i < foodObject.foods.length; i++) {
+//     // create div
+//     const menu = document.createElement('div')
+//     menu.classList.add('food')
+//     // create list
+//     const newMenu = document.createElement('li')
+//     newMenu.innerText = `${foodObject.foods[i].name} -- ${foodObject.foods[i].totalCalorie}`
+//     newMenu.classList.add('food-item')
+//     menu.appendChild(newMenu)
+
+//     // create completed button
+//     const infoButton = document.createElement('button')
+//     infoButton.innerHTML = foodObject.foods[i].status[0].toUpperCase() + foodObject.foods[i].status.substring(1)
+//     if (infoButton.innerHTML === 'High') {
+//       infoButton.classList.add('high-btn')
+//     } else if (infoButton.innerHTML === 'Medium') {
+//       infoButton.classList.add('medium-btn')
+//     } else {
+//       infoButton.classList.add('low-btn')
+//     }
+//     menu.appendChild(infoButton)
+//     menuList.appendChild(menu)
+//   }
+// }
+// render()
