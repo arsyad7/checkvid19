@@ -60,7 +60,6 @@ function daftar(bioPasien){ //CREATE
 
 function cekPerawatan(bioPasien, database){ //UPDATE
     let pasien = bioPasien //{}
-
     // for (let i = 0; i < pasien.length; i++){
         let count = 0;
         let counterPDP = 0
@@ -81,27 +80,27 @@ function cekPerawatan(bioPasien, database){ //UPDATE
         //PDP - GEJALA BERAT
         
         if (count < 1){
-            if (pasien[i].swab === 'negatif'){
-                pasien[i].status = 'Negatif'
-                pasien[i].saran= 'Tidak perlu tindakan'
+            if (pasien.swab === 'negatif'){
+                pasien.status = 'Negatif'
+                pasien.saran= 'Tidak perlu tindakan'
             }
-            else if (pasien[i].swab = 'Belum pernah swab test'){
-                pasien[i].status = 'Negatif atau OTG (Orang Tanpa Gejala)'
-                pasien[i].saran= 'Perlu hasil swab!'
+            else if (pasien.swab = 'Belum pernah swab test'){
+                pasien.status = 'Negatif atau OTG (Orang Tanpa Gejala)'
+                pasien.saran= 'Perlu hasil swab!'
             }    
-            else if(pasien[i].swab === 'positif'){
-                pasien[i].status = 'OTG (Orang Tanpa Gejala)'
-                pasien[i].saran= 'Perlu isolasi mandiri minimal 1 minggu'
+            else if(pasien.swab === 'positif'){
+                pasien.status = 'OTG (Orang Tanpa Gejala)'
+                pasien.saran= 'Perlu isolasi mandiri minimal 1 minggu'
             }        
         } else if (count > 2 || counterPDP >= 1) {
-            pasien[i].status ='PDP (Pasien Dalam Pengawasan)'
-            pasien[i].saran= "Perlu perawatan rumah sakit"
+            pasien.status ='PDP (Pasien Dalam Pengawasan)'
+            pasien.saran= "Perlu perawatan rumah sakit"
         } else if (count > 0 && count < 3 ) {
-            pasien[i].status = 'ODP (Orang Dalam Pemantauan)'
-            pasien[i].saran= 'Perlu isolasi mandiri minimal 2 minggu'
+            pasien.status = 'ODP (Orang Dalam Pemantauan)'
+            pasien.saran= 'Perlu isolasi mandiri minimal 2 minggu'
         }
         
-        
+    console.log(pasien)
     // }
     return pasien
 }
@@ -115,8 +114,8 @@ let bioPasien =
         nama: 'Joe',
         umur: 24,
         jenisKelamin: 'Pria',
-        gejala: ['Demam'],
-        hasilSwab: 'positif'
+        gejala: [],
+        hasilSwab: ''
     }
 
 // console.log(cekPerawatan(bioPasien, db_gejala))
@@ -185,16 +184,27 @@ function rendertable() {
         <td id="gejalaPeriksa"> ${users[i].gejala} </td>
         <td> 
             <a href="#" class="edit" style="margin-right: 20px; font-size: 22px;"><b>Delete</b></a>
-            <a href="#part4" style="font-size: 22px;" onclick="myFunction()"><b>Cek Hasil</b></a>
+            <a href="#part4" style="font-size: 22px;" onclick="cekHasil(${i})"><b>Cek Hasil</b></a>
         </td>
         </tr> `
     }
 }
 
+function cekHasil(pasien){
+    let dataPasien = cekPerawatan(users[pasien], db_gejala)
+
+    let namaPasien = document.getElementById("namaHasil")
+    let statusPasien = document.getElementById("statusHasil")
+    let saran = document.getElementById("pesanHasil")
+
+    namaPasien.innerHTML = dataPasien.nama
+    statusPasien.innerHTML = dataPasien.status
+    saran.innerHTML = dataPasien.saran
+}
 
 //function eventListener cekHasil
-for
-<button onclick="myFunction()">Click me</button>
+// for
+// <button onclick="myFunction()">Click me</button>
 
 // let namaPeriksa = document.getElementById("namaPeriksa")
 
